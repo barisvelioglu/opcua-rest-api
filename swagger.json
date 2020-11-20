@@ -1,0 +1,49 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "MEXT Integration Cloud",
+    "description": "",
+    "version": "1.0"
+  },
+  "produces": ["application/json"],
+  "paths": {
+    "/opcs/{opcId}/tags/{tagId}": {
+      "get": {
+        "x-swagger-router-controller": "home",
+        "operationId": "index",
+        "tags": ["OPC"],
+        "description": "",
+        "parameters": [
+          { "name": "opcId", "in": "path", "required": true, "type": "string" },
+          { "name": "tagId", "in": "path", "required": true, "type": "string" }
+        ],
+        "responses": {}
+      },
+      "post": {
+        "x-swagger-router-controller": "home",
+        "operationId": "index",
+        "tags": ["OPC"],
+        "description": "",
+        "parameters": [
+          { "name": "opcId", "in": "path", "required": true, "type": "string" },
+          { "name": "tagId", "in": "path", "required": true, "type": "string" },
+          { "name": "dataType", "in": "formData", "required": true, "type": "string" },
+          { "name": "value", "in": "formData", "required": true, "type": "string" }
+        ],
+        "responses": {}
+      }
+    },
+    "/exds/buffers/{bufferName}": {
+      "get": {
+        "x-swagger-router-controller": "home",
+        "operationId": "index",
+        "tags": ["ExDs"],
+        "description": "",
+        "parameters": [
+          { "name": "bufferName", "in": "formData", "required": true, "type": "string" }
+        ],
+        "responses": {}
+      }
+    }
+  }
+}
